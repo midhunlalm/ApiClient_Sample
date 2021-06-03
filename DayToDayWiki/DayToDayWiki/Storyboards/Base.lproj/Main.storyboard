@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qee-GV-b2a">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="MRj-GA-LLq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qee-GV-b2a" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oc8-JL-fOn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NIc-SV-1PR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146.37681159420291" y="79.6875"/>
+        </scene>
+        <!--Search Result Controller-->
+        <scene sceneID="7E9-73-R2A">
+            <objects>
+                <viewController storyboardIdentifier="SearchResultController" id="IUt-IL-tIK" customClass="SearchResultController" customModule="DayToDayWiki" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dBT-zX-KKu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Pp-8U-QpR" customClass="SearchTextFieldView" customModule="DayToDayWiki" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mNz-K7-s6q"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BSO-ED-Dyj">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Ul-0Y-UrT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Ul-0Y-UrT" firstAttribute="trailing" secondItem="5Pp-8U-QpR" secondAttribute="trailing" id="OXW-En-V4w"/>
+                            <constraint firstItem="5Pp-8U-QpR" firstAttribute="top" secondItem="5Ul-0Y-UrT" secondAttribute="top" id="RCy-3S-cLS"/>
+                            <constraint firstItem="5Ul-0Y-UrT" firstAttribute="trailing" secondItem="BSO-ED-Dyj" secondAttribute="trailing" id="oC5-XP-UeM"/>
+                            <constraint firstItem="5Ul-0Y-UrT" firstAttribute="bottom" secondItem="BSO-ED-Dyj" secondAttribute="bottom" id="omt-PU-fws"/>
+                            <constraint firstItem="BSO-ED-Dyj" firstAttribute="leading" secondItem="5Ul-0Y-UrT" secondAttribute="leading" id="otS-EF-apG"/>
+                            <constraint firstItem="5Pp-8U-QpR" firstAttribute="leading" secondItem="5Ul-0Y-UrT" secondAttribute="leading" id="uXV-Tv-j47"/>
+                            <constraint firstItem="BSO-ED-Dyj" firstAttribute="top" secondItem="5Pp-8U-QpR" secondAttribute="bottom" id="uz2-qM-C8j"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4O2-sn-i91"/>
+                    <connections>
+                        <outlet property="searchTextFieldView" destination="5Pp-8U-QpR" id="9hB-Pj-e81"/>
+                        <outlet property="tableView" destination="BSO-ED-Dyj" id="5bA-Aa-nfl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EHn-4v-CU7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="617" y="80"/>
+        </scene>
+        <!--Search Details Controller-->
+        <scene sceneID="aHr-21-Vi3">
+            <objects>
+                <viewController storyboardIdentifier="SearchDetailsController" id="K7b-h2-RPd" customClass="SearchDetailsController" customModule="DayToDayWiki" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x3N-qp-NzJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XqO-KV-HnI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WCC-kR-RIT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1388" y="80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
